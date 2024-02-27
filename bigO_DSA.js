@@ -55,3 +55,57 @@ function addItems(n) {
 
 /*O(n*log(n)) is a very efficient algorithm for all data types, and O(log(n))is also one 
 of the most efficient sorting algorithms  */
+
+
+
+
+
+
+//Classes
+class Cookie {
+  constructor(name, cars) {
+    this.name = name;
+    this.cars = cars;
+    /*Linked List can take the methods: 
+      push(),==> push.(value) etc
+       unshift()
+       shift()
+       pop()
+       insert()
+       remove()*/
+  }
+}
+const crv = new Cookie('CRV', 'Honda');
+console.log(crv.name);
+console.log(crv.cars);
+
+//Pointers
+let num1 = 5;
+let num2 = num1;
+num1 = 10; //if we say num1 = 10 now, num2's value won't change
+
+let obj1 = { value: 11 };
+obj2 = obj1; //<= obj2 = {value:11}, and if we change value of obj1, obj2 will change too
+
+//Linked Lists don't have indexes
+//Arrays are usually in continuous places in memory while linkedLists are usually all over the place
+//Linked Lists are also called null-terminating lists
+//A Node is a value and a pointer
+class Node {
+  constructor(value) {
+    this.value = value;
+    this.next = null;
+  }
+}
+
+class LinkedList {
+  constructor(value) {
+    const newHead = new Node(value);
+    this.head = newHead;
+    this.tail = this.head;
+    this.length = 1;
+  }
+}
+
+let myLinkedList = new LinkedList(4);
+
