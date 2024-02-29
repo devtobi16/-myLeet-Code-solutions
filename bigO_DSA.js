@@ -87,6 +87,8 @@ num1 = 10; //if we say num1 = 10 now, num2's value won't change
 let obj1 = { value: 11 };
 obj2 = obj1; //<= obj2 = {value:11}, and if we change value of obj1, obj2 will change too
 
+//Arrays and LinkedLists are similar
+//,but
 //Linked Lists don't have indexes
 //Arrays are usually in continuous places in memory while linkedLists are usually all over the place
 //Linked Lists are also called null-terminating lists
