@@ -180,7 +180,21 @@ class LinkedList {
     }
  
 	// unshift Method
-
+   unshift(value){
+         const newNode = new Node(value)
+         if(!this.head){
+             let temp = this.head;
+             this.head = newNode;
+             this.tail = this.head;
+         }
+         else{
+         let temp = this.head;
+         this.head = newNode;
+         this.head.next = temp;
+         }
+         this.length++;
+         return this;
+     }
 
 }
  
