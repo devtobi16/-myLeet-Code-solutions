@@ -195,6 +195,21 @@ class LinkedList {
          this.length++;
          return this;
      }
+	//shift Method
+   shift(){
+	if(!this.head)
+        {
+	return undefined;
+	    }else{
+	    let temp = this.head;
+	    this.head = temp.next;
+	    this.length--;
+	    if(this.length === 0){
+	        this.tail = null;
+	    }
+	    return temp;
+	}
+}
 
 }
  
