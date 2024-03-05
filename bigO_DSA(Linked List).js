@@ -194,7 +194,7 @@ class LinkedList {
          }
          this.length++;
          return this;
-     }
+   }
 	//shift Method
    shift(){
 	if(!this.head)
@@ -209,6 +209,30 @@ class LinkedList {
 	    }
 	    return temp;
 	}
+     }
+	//set Method
+      get(value){
+        if(this.head === null|| value<0||value>myLinkedList.length-1){
+            return undefined;
+        }  
+        if(value===0){
+          return this.head;
+       }
+       if (value===this.length-1){
+           return this.tail;
+       }
+        
+        for (let i = 0; i<myLinkedList.length; i++){
+              let temp = this.head.next;
+            
+              if(i===value){
+                  return temp;
+              }
+            
+              
+           
+        }
+    }
 }
 
 }
