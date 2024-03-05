@@ -210,7 +210,7 @@ class LinkedList {
 	    return temp;
 	}
      }
-	//set Method
+	//get Method
       get(value){
         if(this.head === null|| value<0||value>myLinkedList.length-1){
             return undefined;
