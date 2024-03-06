@@ -233,9 +233,33 @@ class LinkedList {
            
         }
     }
+	//remove method
+		remove(index){
+	    if(this.head === null||index>this.length-1||index<0){
+	        return undefined;
+	    }
+	    if(index === 0){
+	      return this.shift();
+	        
+	    }
+	    if(index===this.length-1){
+	      return this.pop();
+	   
+	    }
+	    {
+	        let pre = this.get(index-1);
+	        let temp = this.get(index);
+	         pre.next = temp.next;
+	         temp.next = null;
+	   this.length--;
+	         return temp;
+	         
+	        
+	    }
+	}
 }
 
-}
+
  
 
 
