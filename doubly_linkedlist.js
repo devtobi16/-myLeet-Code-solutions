@@ -79,6 +79,24 @@ class DoublyLinkedList {
         this.length++;
         return this;
     }
+
+	//Shift Method
+	 shift(){
+            let temp = this.head;
+        if(!this.head) return undefined;
+        if(this.head === this.tail)
+        {
+            this.head = null;
+            this.tail = null;
+        }else {
+            this.head = this.head.next;
+            temp.next = null;
+            this.head.prev = null;
+       
+        }
+         this.length--;
+         return temp;
+    }
 	
 }
  
