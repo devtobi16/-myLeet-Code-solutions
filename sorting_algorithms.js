@@ -79,3 +79,24 @@ function mergeSort(arr){
     }
      return[...sortedArr,...leftArr,...rightArr]//order is important
   }
+
+//Using Objects to count and access letters 
+/**
+ * @param {number[]} nums
+ * @return {number}
+ */
+var majorityElement = function(nums) {
+    let obj = {};
+    for(let i = 0; i<nums.length; i++){
+    const char = nums[i];
+    obj[char]=(obj[char]||0)+1;
+    console.log(obj);
+    }
+    let max;
+    for(const[i,el] of Object.entries(obj)){
+    if(!max||el>max.el){
+        max={i,el};
+    }
+    }
+    return max.i;
+};
