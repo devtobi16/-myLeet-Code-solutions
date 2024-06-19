@@ -1,3 +1,9 @@
+  for(const [key, value] of Object.entries(map)){
+    if(value===1){
+        sum+=Number(key);
+    }
+    }
+
 //Bubble Sort
 function bubbleSort(arr) {
   let swapped;
@@ -100,3 +106,4 @@ var majorityElement = function(nums) {
     }
     return max.i;
 };
+
